@@ -1,0 +1,108 @@
+@use'./common/index' as *;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.navbar{
+    padding: 2rem;
+    height: var(--navbar-height);
+    width: 100%; 
+    z-index: 3;
+    @include position(fixed,0,0,null,null);
+    @include flex(null,space-between,center,null);
+    .logo{
+        width: 50px;
+        filter: invert(1);
+        
+    }
+    img{
+        width: 100%;
+    }
+    .hamburger{
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        .line{
+            width: 100%;
+            height: .1rem;
+            background-color: var(--white-color);
+            margin-bottom: var(--half-space);
+            transition: .3s;
+            &:nth-child(2),
+            &:nth-child(3){
+                width: 70%;
+            }
+        }
+        // &.active{
+        //     .line{
+        //         &:first-child{
+        //             transform:translate(4px, 17px) rotate(47deg);
+        //         }
+        //         &:nth-child(2){
+        //             transform: translate(4px, 7px) rotate(136deg);
+        //         }
+        //         &:nth-child(3){
+        //             transform: translate(7px, -2px) rotate(47deg);
+        //         }
+        //         &:nth-child(4){
+        //             transform:translate(0px, -11px) rotate(136deg);
+        //         }
+        //     }
+        // }
+            &-close{
+                width: 3rem;
+                height: 3rem;
+                cursor: pointer;
+                @include position(absolute,var(--full-space),var(--full-space),null,null) ;
+                
+                .line{
+                    width: 100%;
+                    height: .2rem;
+                    background-color: #000;
+                    &:first-child{
+                        transform: translate(0px,12px) rotate(45deg);
+                    }
+                    &:last-child{
+                        transform: translate(0px, 10px) rotate(135deg);
+
+                    }
+                }
+            }
+    }
+    h2{
+        font-size: 2rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color: var(--white-color);
+    }
+    .toggle-state{
+        width: 300px;
+        background-color: #fff;
+        list-style: none;
+        transition: .3s;
+        height: 100vh;
+        overflow: auto;
+        @include position(fixed, 0,-100%,null,null);
+        &.active{
+           right: 0;
+
+       }
+        li{
+            margin: var(--full-space) var(--half-space);
+            a{
+                color: #000;
+                font-size: 2rem;
+                text-decoration: none;
+            }
+        }
+
+    }
+    @include mq(tablet){
+        .logo{
+            width: 120px;
+        }
+        .hamburger{
+            width: 5rem;
+        }
+        h2{
+            font-size: 2.5rem;
+        }
+    }
+}

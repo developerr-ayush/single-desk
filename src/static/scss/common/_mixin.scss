@@ -1,0 +1,27 @@
+@use 'sass:map';
+@mixin flex($direction,$justify,$align,$wrap) {
+    display: flex;
+    justify-content:$justify ;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+@mixin position($pos,$top,$right,$bottom,$left) {
+    position: $pos;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+
+}
+$viewport :(
+    mobile:500px,
+    tablet:768px,
+    laptop:1024px,
+);
+@mixin mq($key) {
+  $size : map.get($viewport,$key)  ;
+  @media (min-width:$size) {
+    @content;
+  }
+}

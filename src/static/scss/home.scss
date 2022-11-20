@@ -1,0 +1,30 @@
+.home-slider{
+    height: 100vh;
+}
+.home {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/mint-bg-lamp.jpg');
+    background-size: cover;
+    background-position: top right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font: 4rem playfarir-bold;
+        text-align: center;
+        color: var(--white-color);
+        padding: var(--full-space);
+    }
+
+    &2 {
+        background-image: url('../images/brown-bg.jpg');
+        
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+    
+}
+

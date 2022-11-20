@@ -1,0 +1,29 @@
+:root{
+    --black-color:#000;
+    --white-color:#fff;
+    --full-space:1.5rem;
+    --half-space:calc((var(--full-space) / 2));
+    --navbar-height:13rem;
+}
+// fonts 
+@font-face {
+    font-family: playfarir-light;
+    src: url(../../Fonts/PlayfairDisplay-SemiBold.ttf);
+}
+@font-face {
+    font-family: playfarir-regular;
+    src: url(../../Fonts/PlayfairDisplay-Regular.ttf);
+}
+@font-face {
+    font-family: playfarir-medium;
+    src: url(../../Fonts/PlayfairDisplay-Medium.ttf);
+}
+@font-face {
+    font-family: playfarir-bold;
+    src: url(../../Fonts/PlayfairDisplay-Bold.ttf);
+}
+
+@font-face {
+    font-family: playfarir-extra-bold;
+    src: url(../../Fonts/PlayfairDisplay-ExtraBold.ttf);
+}
